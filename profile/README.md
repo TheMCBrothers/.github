@@ -9,13 +9,13 @@ https://www.themcbrothers.net
 ---
 
 ### Mods made by TheMCBrothers
-Name|Link|Source|Downloads
----|---|---|---
-Useless Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbros-useless-mod) | [Source Code](https://github.com/TheMCBrothers/Useless-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_322455.svg?badge_style=flat)
-Interior Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbrothers-interior-mod) | [Source Code](https://github.com/TheMCBrothers/Interior-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_344424.svg?badge_style=flat)
-Pudding Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/pudding-mod) | [Source Code](https://github.com/TheMCBrothers/Pudding-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_339834.svg?badge_style=flat)
-Useful Machinery | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-machinery) | [Source Code](https://github.com/TheMCBrothers/Useful-Machinery) | ![Downloads](https://cf.way2muchnoise.eu/full_355129.svg?badge_style=flat)
-Useful Foundation | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-foundation) | [Source Code](https://github.com/TheMCBrothers/Useful-Foundation) | ![Downloads](https://cf.way2muchnoise.eu/full_355245.svg?badge_style=flat)
+Name|Link|Source|Downloads|Minecraft Versions
+---|---|---|---|---
+Useless Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbros-useless-mod) | [Source Code](https://github.com/TheMCBrothers/Useless-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_322455.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_322455_all.svg)
+Interior Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbrothers-interior-mod) | [Source Code](https://github.com/TheMCBrothers/Interior-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_344424.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_344424_all.svg)
+Pudding Mod | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/pudding-mod) | [Source Code](https://github.com/TheMCBrothers/Pudding-Mod) | ![Downloads](https://cf.way2muchnoise.eu/full_339834.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_339834_all.svg)
+Useful Machinery | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-machinery) | [Source Code](https://github.com/TheMCBrothers/Useful-Machinery) | ![Downloads](https://cf.way2muchnoise.eu/full_355129.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355129_all.svg)
+Useful Foundation | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-foundation) | [Source Code](https://github.com/TheMCBrothers/Useful-Foundation) | ![Downloads](https://cf.way2muchnoise.eu/full_355245.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355245_all.svg)
 
 <!--
 
