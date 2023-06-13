@@ -23,6 +23,7 @@ jobs:
       modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
       nexus_uname: ${{ secrets.PUBLISH_USER }}
       nexus_pwd: ${{ secrets.PUBLISH_PASSWORD }}
+      ref_name: ${{ github.ref_name }}
 
     steps:
     - name: Checkout
