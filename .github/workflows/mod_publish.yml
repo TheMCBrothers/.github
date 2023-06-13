@@ -1,5 +1,19 @@
 name: Publish
-on: workflow_call
+on:
+  workflow_call:
+    secrets:
+      CURSEFORGE_TOKEN:
+        description: CurseForge Token
+        required: false
+      MODRINTH_TOKEN:
+        description: Modrinth Token
+        required: false
+      PUBLISH_USER:
+        description: Nexus Username
+        required: false
+      PUBLISH_PASSWORD:
+        description: Nexus Password
+        required: false
 
 jobs:
   build:
@@ -23,8 +37,11 @@ jobs:
     - name: Build with Gradle
       run: chmod +x ./gradlew && ./gradlew build
     - name: Publish to Nexus
+      if: env.nexus_uname != null && env.nexus_pwd != null
       run: ./gradlew publish
     - name: Publish to Modrinth
+      if: env.modrinth_token != null
       run: ./gradlew modrinth
     - name: Publish to CurseForge
+      if: env.cf_key != null
       run: ./gradlew curseforge
