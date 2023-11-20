@@ -1,0 +1,56 @@
+name: Publish
+on:
+  workflow_call:
+    secrets:
+      CURSEFORGE_TOKEN:
+        description: CurseForge Token
+        required: false
+      MODRINTH_TOKEN:
+        description: Modrinth Token
+        required: false
+      PUBLISH_USER:
+        description: Nexus Username
+        required: false
+      PUBLISH_PASSWORD:
+        description: Nexus Password
+        required: false
+
+jobs:
+  build:
+    name: "Build and Release"
+    runs-on: ubuntu-latest
+    if: |
+      !contains(github.event.head_commit.message, '[ci skip]')
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'microsoft'
+        
+    - name: Validate Gradle Wrapper
+      uses: gradle/wrapper-validation-action@v1
+      
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+
+    - name: Setup and Build with Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build --stacktrace --no-daemon
+
+    - name: Release to Maven and CurseForge
+      uses: gradle/gradle-build-action@v2
+      if: |
+        !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
+      env:
+        CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+        MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        NEXUS_UNAME: ${{ secrets.PUBLISH_USER }}
+        NEXUS_PWD: ${{ secrets.PUBLISH_PASSWORD }}
+      with:
+        arguments: publish publishUnified --stacktrace --no-daemon
