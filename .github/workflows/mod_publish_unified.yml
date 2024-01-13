@@ -43,7 +43,7 @@ jobs:
       with:
         arguments: build --stacktrace --no-daemon
 
-    - name: Release to Maven and CurseForge
+    - name: Release to Maven, CurseForge and Modrinth
       uses: gradle/gradle-build-action@v2
       if: |
         !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
@@ -52,5 +52,7 @@ jobs:
         MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
         NEXUS_UNAME: ${{ secrets.PUBLISH_USER }}
         NEXUS_PWD: ${{ secrets.PUBLISH_PASSWORD }}
+        PUBLISH_USER: ${{ secrets.PUBLISH_USER }}
+        PUBLISH_PASSWORD: ${{ secrets.PUBLISH_PASSWORD }}
       with:
         arguments: publish publishUnified --stacktrace --no-daemon
