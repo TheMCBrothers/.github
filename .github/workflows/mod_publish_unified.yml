@@ -9,10 +9,10 @@ on:
         description: Modrinth Token
         required: false
       PUBLISH_USER:
-        description: Nexus Username
+        description: Publish User
         required: false
       PUBLISH_PASSWORD:
-        description: Nexus Password
+        description: Publish Password
         required: false
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'microsoft'
@@ -43,7 +43,7 @@ jobs:
       with:
         arguments: build --stacktrace --no-daemon
 
-    - name: Release to Maven, CurseForge and Modrinth
+    - name: Release to Maven / CurseForge / Modrinth
       uses: gradle/gradle-build-action@v2
       if: |
         !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
