@@ -31,6 +31,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'microsoft'
+        cache: 'gradle'
         
     - name: Validate Gradle Wrapper
       uses: gradle/wrapper-validation-action@v1
