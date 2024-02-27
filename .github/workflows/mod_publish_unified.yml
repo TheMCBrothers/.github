@@ -20,6 +20,11 @@ on:
         required: false
         type: string
         default: '17'
+      norelease:
+        description: Do not upload to Maven/CurseForge/Modrinth
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -68,7 +73,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: |
-          build/libs/*.jar
+          'build/libs/*.jar'
         generateReleaseNotes: true
         removeArtifacts: true
         replacesArtifacts: true
