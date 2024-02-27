@@ -14,6 +14,12 @@ on:
       PUBLISH_PASSWORD:
         description: Publish Password
         required: false
+    inputs:
+      java-version:
+        description: Java Version
+        required: false
+        type: string
+        default: '17'
 
 jobs:
   build:
@@ -26,10 +32,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       
-    - name: Set up JDK 17
+    - name: Set up JDK ${{ github.event.inputs.java-version }}
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: ${{ github.event.inputs.java-version }}
         distribution: 'microsoft'
         cache: 'gradle'
         
@@ -57,5 +63,12 @@ jobs:
         PUBLISH_PASSWORD: ${{ secrets.PUBLISH_PASSWORD }}
       with:
         arguments: publish publishUnified --stacktrace --no-daemon
-    - name: Set Release on GitHub
-      uses: technote-space/release-github-actions@v6
+
+    - name: GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: |
+          build/libs/*.jar
+        generateReleaseNotes: true
+        removeArtifacts: true
+        replacesArtifacts: true
