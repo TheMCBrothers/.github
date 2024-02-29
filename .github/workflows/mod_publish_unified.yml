@@ -15,6 +15,13 @@ on:
         description: Publish Password
         required: false
 
+    inputs:
+      publishFiles:
+        description: Publish files to GitHub release
+        type: boolean
+        required: false
+        default: false
+
 jobs:
   build:
     name: "Build and Release"
@@ -63,10 +70,11 @@ jobs:
 
     - name: GitHub Release
       uses: ncipollo/release-action@v1
+      if: |
+        !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
+      continue-on-error: true
       with:
         allowUpdates: true
-        artifacts: |
-          'build/libs/*.jar'
         generateReleaseNotes: true
         removeArtifacts: true
         replacesArtifacts: true
