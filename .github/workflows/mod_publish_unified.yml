@@ -15,13 +15,6 @@ on:
         description: Publish Password
         required: false
 
-    inputs:
-      publishFiles:
-        description: Publish files to GitHub release
-        type: boolean
-        required: false
-        default: false
-
 jobs:
   build:
     name: "Build and Release"
