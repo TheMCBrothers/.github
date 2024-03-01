@@ -1,5 +1,10 @@
 name: Crowdin Upload
-on: [ workflow_call ]
+on:
+  workflow_call:
+    secrets:
+      CROWDIN_TOKEN:
+        description: Crowdin Personal Access Token
+        required: true
 
 jobs:
   upload:
@@ -15,4 +20,4 @@ jobs:
           upload_translations: false
           download_translations: false
         env:
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
