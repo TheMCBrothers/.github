@@ -2,7 +2,7 @@ name: Crowdin Download
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      GIT_TOKEN:
         description: GitHub Token
         required: true
 
@@ -46,5 +46,5 @@ jobs:
           pull_request_base_branch_name: ${{ inputs.pull_request_base_branch_name }}
           pull_request_labels: 'translations'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
