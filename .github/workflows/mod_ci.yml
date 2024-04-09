@@ -1,5 +1,12 @@
 name: Java CI
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      java_version:
+        description: Java Version
+        type: string
+        required: false
+        default: '17'
 
 jobs:
   build:
@@ -13,10 +20,10 @@ jobs:
           fetch-depth: 1000
           fetch-tags: true
 
-      - name: Setup JDK 17
+      - name: Setup JDK ${{ inputs.java_version }}
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: ${{ inputs.java_version }}
           distribution: 'temurin'
 
       - name: Make Gradle Wrapper executable
