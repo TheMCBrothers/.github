@@ -1,6 +1,12 @@
 name: Publish
 on:
   workflow_call:
+    inputs:
+      java_version:
+        description: Java Version
+        type: string
+        required: false
+        default: '17'
     secrets:
       CURSEFORGE_TOKEN:
         description: CurseForge Token
@@ -26,47 +32,47 @@ jobs:
       contents: write
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Setup JDK ${{ inputs.java_version }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ inputs.java_version }}
+          distribution: 'temurin'
         
-    - name: Validate Gradle Wrapper
-      uses: gradle/wrapper-validation-action@v1
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
       
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
+      - name: Make Gradle Wrapper executable
+        run: chmod +x ./gradlew
 
-    - name: Setup and Build with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: build --stacktrace --no-daemon
+      - name: Setup and Build with Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build --stacktrace --no-daemon
 
-    - name: Release to Maven / CurseForge / Modrinth
-      uses: gradle/gradle-build-action@v2
-      if: |
-        !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
-      env:
-        CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
-        MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
-        NEXUS_UNAME: ${{ secrets.PUBLISH_USER }}
-        NEXUS_PWD: ${{ secrets.PUBLISH_PASSWORD }}
-        PUBLISH_USER: ${{ secrets.PUBLISH_USER }}
-        PUBLISH_PASSWORD: ${{ secrets.PUBLISH_PASSWORD }}
-      with:
-        arguments: publish publishUnified --stacktrace --no-daemon
+      - name: Release to Maven / CurseForge / Modrinth
+        uses: gradle/gradle-build-action@v2
+        if: |
+          !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          NEXUS_UNAME: ${{ secrets.PUBLISH_USER }}
+          NEXUS_PWD: ${{ secrets.PUBLISH_PASSWORD }}
+          PUBLISH_USER: ${{ secrets.PUBLISH_USER }}
+          PUBLISH_PASSWORD: ${{ secrets.PUBLISH_PASSWORD }}
+        with:
+          arguments: publish publishUnified --stacktrace --no-daemon
 
-    - name: GitHub Release
-      uses: ncipollo/release-action@v1
-      if: |
-        !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
-      continue-on-error: true
-      with:
-        allowUpdates: true
-        generateReleaseNotes: true
-        removeArtifacts: true
-        replacesArtifacts: true
+      - name: GitHub Release
+        uses: ncipollo/release-action@v1
+        if: |
+          !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
+        continue-on-error: true
+        with:
+          allowUpdates: true
+          generateReleaseNotes: true
+          removeArtifacts: true
+          replacesArtifacts: true
