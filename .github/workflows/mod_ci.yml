@@ -29,8 +29,11 @@ jobs:
       - name: Make Gradle Wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Build with Gradle
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v3
+
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: build --stacktrace
-          gradle-version: wrapper
+
+      - name: Build with Gradle
+        run: ./gradlew build --stacktrace
