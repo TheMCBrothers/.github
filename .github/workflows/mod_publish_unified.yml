@@ -40,20 +40,21 @@ jobs:
         with:
           java-version: ${{ inputs.java_version }}
           distribution: 'temurin'
-        
-      - name: Validate Gradle Wrapper
-        uses: gradle/actions/wrapper-validation@v3
-      
+
       - name: Make Gradle Wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Setup and Build with Gradle
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v3
+
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: build --stacktrace --no-daemon
+
+      - name: Build with Gradle
+        run: ./gradlew build --stacktrace
 
       - name: Release to Maven / CurseForge / Modrinth
-        uses: gradle/actions/setup-gradle@v3
+        run: ./gradlew publish publishUnified --stacktrace
         if: |
           !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
         env:
@@ -63,8 +64,6 @@ jobs:
           NEXUS_PWD: ${{ secrets.PUBLISH_PASSWORD }}
           PUBLISH_USER: ${{ secrets.PUBLISH_USER }}
           PUBLISH_PASSWORD: ${{ secrets.PUBLISH_PASSWORD }}
-        with:
-          arguments: publish publishUnified --stacktrace --no-daemon
 
       - name: GitHub Release
         uses: ncipollo/release-action@v1
