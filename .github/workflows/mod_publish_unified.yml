@@ -54,7 +54,7 @@ jobs:
         run: ./gradlew build --stacktrace
 
       - name: Release to Maven / CurseForge / Modrinth
-        run: ./gradlew publish publishUnified --stacktrace
+        run: ./gradlew publish publishUnified --stacktrace --no-configuration-cache
         if: |
           !contains(github.event.head_commit.message, '[norelease]') && github.event.inputs.norelease != 'true'
         env:
