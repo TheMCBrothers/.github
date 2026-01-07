@@ -1,20 +1,17 @@
-## Hi there 👋
-
-![TheMCBrothers](https://i.imgur.com/jeA3w1J.png)
+# ![TheMCBrothers](https://i.imgur.com/BRO63dE.png)
 
 https://themcbrothers.net
 
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/author/full_TheMCBrothers_Downloads%20on%20CurseForge.svg?badge_style=flat)](https://www.curseforge.com/members/themcbrothers/projects)
 
----
+## Mods made by TheMCBrothers
 
-### Mods made by TheMCBrothers
-
-Name | Link | Downloads | Minecraft Versions
+Name | Modrinth | CurseForge | Minecraft Versions
 ---|---|---|---
-[Useless Mod](https://github.com/TheMCBrothers/Useless-Mod) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbros-useless-mod) | ![Downloads](https://cf.way2muchnoise.eu/full_322455.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_322455_all.svg?badge_style=flat)
-[TheMCBrothers Interior Mod](https://github.com/TheMCBrothers/Interior-Mod) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/themcbrothers-interior-mod) | ![Downloads](https://cf.way2muchnoise.eu/full_344424.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_344424_all.svg?badge_style=flat)
-[Useful Machinery](https://github.com/TheMCBrothers/Useful-Machinery) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-machinery) | ![Downloads](https://cf.way2muchnoise.eu/full_355129.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355129_all.svg?badge_style=flat)
-[Useful Foundation](https://github.com/TheMCBrothers/Useful-Foundation) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/useful-foundation) | ![Downloads](https://cf.way2muchnoise.eu/full_355245.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355245_all.svg?badge_style=flat)
-[Pudding Mod](https://github.com/TheMCBrothers/Pudding-Mod) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/pudding-mod) | ![Downloads](https://cf.way2muchnoise.eu/full_339834.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_339834_all.svg?badge_style=flat)
-[Shared Advancements](https://github.com/TheMCBrothers/Shared-Advancements) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/shared-advancements) | ![Downloads](https://cf.way2muchnoise.eu/full_831959.svg?badge_style=flat) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_831959_all.svg?badge_style=flat)
+[Shared Advancements](https://github.com/TheMCBrothers/Shared-Advancements) | [![Modrinth](https://img.shields.io/modrinth/dt/78EIgPlj?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/78EIgPlj) | [![CurseForge](https://cf.way2muchnoise.eu/full_831959.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/shared-advancements) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_831959_all.svg?badge_style=flat)
+[TheMCBrosLib](https://github.com/TheMCBrothers/TheMCBrosLib) | [![Modrinth](https://img.shields.io/modrinth/dt/eIDsiLbx?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/eIDsiLbx) | [![CurseForge](https://cf.way2muchnoise.eu/full_387586.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/themcbroslib) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_387586_all.svg?badge_style=flat)
+[Useless Mod](https://github.com/TheMCBrothers/Useless-Mod) | [![Modrinth](https://img.shields.io/modrinth/dt/yDQBgtWH?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/yDQBgtWH) | [![CurseForge](https://cf.way2muchnoise.eu/full_322455.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/themcbros-useless-mod) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_322455_all.svg?badge_style=flat)
+[TheMCBrothers Interior Mod](https://github.com/TheMCBrothers/Interior-Mod) | [![Modrinth](https://img.shields.io/modrinth/dt/MkxDy0gk?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/MkxDy0gk) | [![CurseForge](https://cf.way2muchnoise.eu/full_344424.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/themcbrothers-interior-mod) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_344424_all.svg?badge_style=flat)
+[Useful Machinery](https://github.com/TheMCBrothers/Useful-Machinery) | [![Modrinth](https://img.shields.io/modrinth/dt/AVW4n3h7?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/AVW4n3h7) | [![CurseForge](https://cf.way2muchnoise.eu/full_355129.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/useful-machinery) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355129_all.svg?badge_style=flat)
+[Useful Foundation](https://github.com/TheMCBrothers/Useful-Foundation) | [![Modrinth](https://img.shields.io/modrinth/dt/jwQmhdWo?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/jwQmhdWo) | [![CurseForge](https://cf.way2muchnoise.eu/full_355245.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/useful-foundation) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_355245_all.svg?badge_style=flat)
+[Pudding Mod](https://github.com/TheMCBrothers/Pudding-Mod) | [![Modrinth](https://img.shields.io/modrinth/dt/A2TRo4u1?style=flat-square&logo=modrinth&label=%20&color=gray)](https://modrinth.com/project/A2TRo4u1) | [![CurseForge](https://cf.way2muchnoise.eu/full_339834.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/pudding-mod) | ![Minecraft Versions](https://cf.way2muchnoise.eu/versions/For%20MC_339834_all.svg?badge_style=flat)
